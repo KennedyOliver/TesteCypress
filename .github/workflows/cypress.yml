@@ -12,21 +12,15 @@ jobs:
 
     steps:
       - name: Checkout código
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22'
 
-      - name: Build aplicação
-        run: npm run build
+      - name: Instalar dependências
+        run: npm install
 
-      - name: Iniciar servidor
-        run: npx serve -s build -l 3000 &
-
-      - name: Esperar servidor
-        run: npx wait-on http://localhost:3000
-
-      - name: Rodar Cypress
+      - name: Rodar testes Cypress
         run: npx cypress run
