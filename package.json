@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npx serve . -l 3000",
     "test": "cypress run",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
