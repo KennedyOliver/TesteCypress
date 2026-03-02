@@ -26,3 +26,17 @@ jobs:
 
       - name: Run Cypress
         run: npm run cypress:run
+
+      - name: Upload Cypress screenshots
+        if: failure()   # só envia se os testes falharem
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+
+      - name: Upload Cypress videos
+        if: always()    # sempre envia os vídeos
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-videos
+          path: cypress/videos
