@@ -7,19 +7,19 @@ class Elementos{
         cy.contains('button', 'Abra sua conta').click();
     }
     campoNome(){
-        cy.get("#name").type("Kennedy Oliveira")
+        cy.get('input[name="name"]').type("Kennedy Oliveira")
     }
     campoCelular(){
-        cy.get("#phone").type("61982148152")
+        cy.get('input[name="phone"]').type("61982148152")
     }
     campoEmail(){
-        cy.get("#email").type("kennedy.oliver@live.com")
+        cy.get('input[name="email"]').type("kennedy.oliver@live.com")
     }
     campoCpf(){
-        cy.get("#socialId").type("07189278508")
+        cy.get('input[name="socialId"]').type("07189278508")
     }
     campoDataNasc(){
-        cy.get("#dateOfBirth").type("23041996")
+        cy.get('input[name="dateOfBirth"]').type("23041996")
     }
     checkBox(){
         cy.xpath("//label[@aria-label='Campo de aceite']").click()
