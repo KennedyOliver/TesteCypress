@@ -19,14 +19,14 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Instalar dependências
-        run: npm install
+      - name: Build aplicação
+        run: npm run build
 
       - name: Iniciar servidor
-        run: npm start &
+        run: npx serve -s build -l 3000 &
 
       - name: Esperar servidor
         run: npx wait-on http://localhost:3000
 
-      - name: Rodar testes Cypress
+      - name: Rodar Cypress
         run: npx cypress run
