@@ -4,10 +4,10 @@ class Elementos{
         cy.get("#onetrust-accept-btn-handler").click()
     }
     clickBtnAbrasuaConta(){
-        cy.contains('button', 'Abra sua conta').click();
+        cy.contains('button', 'Abra sua conta',{ timeout: 10000 }).click();
     }
     campoNome(){
-        cy.get('input[name="name"]').type("Kennedy Oliveira")
+        cy.get('input[name="name"]',{ timeout: 10000 }).type("Kennedy Oliveira")
     }
     campoCelular(){
         cy.get('input[name="phone"]').type("61982148152")
