@@ -1,31 +1,31 @@
 class Elementos{
 
     clickCookies(){
-        cy.get("#onetrust-accept-btn-handler").click()
+        cy.get("#onetrust-accept-btn-handler").should('be.visible').click()
     }
     clickBtnAbrasuaConta(){
-        cy.contains('button', 'Abra sua conta').click();
+        cy.contains('button', 'Abra sua conta').should('be.visible').click()
     }
     campoNome(){
-        cy.get('input[name="name"]').type("Kennedy Oliveira")
+        cy.get('input[name="name"]').should('be.visible').type("Kennedy Oliveira")
     }
     campoCelular(){
-        cy.get('input[name="phone"]').type("61982148152")
+        cy.get('input[name="phone"]').should('be.visible').type("61982148152")
     }
     campoEmail(){
-        cy.get('input[name="email"]').type("kennedy.oliver@live.com")
+        cy.get('input[name="email"]').should('be.visible').type("kennedy.oliver@live.com")
     }
     campoCpf(){
-        cy.get('input[name="socialId"]').type("07189278508")
+        cy.get('input[name="socialId"]').should('be.visible').type("07189278508")
     }
     campoDataNasc(){
-        cy.get('input[name="dateOfBirth"]').type("23041996")
+        cy.get('input[name="dateOfBirth"]').should('be.visible').type("23041996")
     }
     checkBox(){
-        cy.xpath("//label[@aria-label='Campo de aceite']").click()
+        cy.xpath("//label[@aria-label='Campo de aceite']").should('be.visible').click()
     }
     btnContinuar(){
-        cy.contains('button', 'Continuar').click();
+        cy.contains('button', 'Continuar').should('be.enabled').click();
     }
 
 }
