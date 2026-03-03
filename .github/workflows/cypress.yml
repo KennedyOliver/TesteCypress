@@ -28,7 +28,7 @@ jobs:
         run: npm run cypress:run
 
       - name: Upload Cypress screenshots
-        if: failure()   # só envia se os testes falharem
+        if: always()  
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
